@@ -1,0 +1,6 @@
+framework module Pods_Almaarid {
+  umbrella header "Pods-Almaarid-umbrella.h"
+
+  export *
+  module * { export * }
+}

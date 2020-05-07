@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Almaarid" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDr-C8-uuf">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n7o-xF-3et" customClass="RoundView" customModule="Almaarid" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="738" width="375" height="40"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="i97-cA-cw5">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hao-sB-Rwy">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="40"/>
+                                                <state key="normal" image="left-arrow"/>
+                                                <connections>
+                                                    <action selector="ForwardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ANm-pV-SnN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeK-OE-Fjg" customClass="RoundButtonCorners" customModule="Almaarid" customModuleProvider="target">
+                                                <rect key="frame" x="137.66666666666666" y="0.0" width="100" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="VaF-x5-CvQ"/>
+                                                </constraints>
+                                                <state key="normal" image="home"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                                        <real key="value" value="13"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="BorderWidth">
+                                                        <real key="value" value="0.0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="BorderColer">
+                                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="HomeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mzY-JK-Ywk"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3q-bF-EK6">
+                                                <rect key="frame" x="247.66666666666666" y="0.0" width="127.33333333333334" height="40"/>
+                                                <state key="normal" image="right-arrow"/>
+                                                <connections>
+                                                    <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Uf-yP-3jY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zeK-OE-Fjg" firstAttribute="centerX" secondItem="i97-cA-cw5" secondAttribute="centerX" id="PsD-D0-j0m"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="i97-cA-cw5" secondAttribute="bottom" id="8qx-2l-KCd"/>
+                                    <constraint firstAttribute="trailing" secondItem="i97-cA-cw5" secondAttribute="trailing" id="OKA-DH-SIx"/>
+                                    <constraint firstAttribute="height" constant="40" id="jeq-hD-R1e"/>
+                                    <constraint firstItem="i97-cA-cw5" firstAttribute="top" secondItem="n7o-xF-3et" secondAttribute="top" id="nDY-PQ-xDx"/>
+                                    <constraint firstItem="i97-cA-cw5" firstAttribute="leading" secondItem="n7o-xF-3et" secondAttribute="leading" id="o1h-1G-Fno"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRaduis">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffset">
+                                        <real key="value" value="-3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.69999999999999996" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vr-tv-gex">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="738"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="qfC-QR-ASH" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                        <rect key="frame" x="137.66666666666666" y="319" width="100" height="100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="4AX-jE-KnR"/>
+                                            <constraint firstAttribute="height" constant="100" id="yUd-2G-X73"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="typeName" value=" ballRotateChase"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qfC-QR-ASH" firstAttribute="centerY" secondItem="1vr-tv-gex" secondAttribute="centerY" id="jeP-m4-svl"/>
+                                    <constraint firstItem="qfC-QR-ASH" firstAttribute="centerX" secondItem="1vr-tv-gex" secondAttribute="centerX" id="jnF-Ew-ITv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1vr-tv-gex" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="J4V-QB-udz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IDr-C8-uuf" secondAttribute="trailing" id="Jgs-kM-b8C"/>
+                            <constraint firstItem="IDr-C8-uuf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KW3-vr-SEn"/>
+                            <constraint firstItem="IDr-C8-uuf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lfd-za-aCa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1vr-tv-gex" secondAttribute="trailing" id="fce-NA-ket"/>
+                            <constraint firstItem="1vr-tv-gex" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gL2-zB-Ibd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n7o-xF-3et" secondAttribute="bottom" id="oZO-NG-KPd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n7o-xF-3et" secondAttribute="trailing" id="qqJ-Le-kzu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="IDr-C8-uuf" secondAttribute="bottom" id="rIf-sd-UhB"/>
+                            <constraint firstItem="n7o-xF-3et" firstAttribute="top" secondItem="1vr-tv-gex" secondAttribute="bottom" id="ycV-8f-TGr"/>
+                            <constraint firstItem="n7o-xF-3et" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zb5-F4-bX4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="BackView" destination="1vr-tv-gex" id="fCQ-ba-KRX"/>
+                        <outlet property="HomeView" destination="n7o-xF-3et" id="a1e-DW-Sue"/>
+                        <outlet property="WebView" destination="IDr-C8-uuf" id="56r-x2-C3E"/>
+                        <outlet property="activityIndicator" destination="qfC-QR-ASH" id="D0P-Z9-9Nb"/>
+                        <outlet property="backBtn" destination="t3q-bF-EK6" id="bm6-Kn-KQe"/>
+                        <outlet property="forwardBtn" destination="Hao-sB-Rwy" id="JFt-F0-C4C"/>
+                        <outlet property="homeBtn" destination="zeK-OE-Fjg" id="Gdj-4L-Oew"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="107"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home" width="24" height="24"/>
+        <image name="left-arrow" width="8.3333330154418945" height="8.3333330154418945"/>
+        <image name="right-arrow" width="8.3333330154418945" height="8.3333330154418945"/>
+    </resources>
+</document>
